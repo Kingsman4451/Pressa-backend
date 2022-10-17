@@ -1,0 +1,2339 @@
+{
+	"info": {
+		"_postman_id": "bce9ab72-a993-4978-bd73-7e0f53cb22fe",
+		"name": "Pressa-exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22592355"
+	},
+	"item": [
+		{
+			"name": "LOGIN",
+			"item": [
+				{
+					"name": "Login admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"salim\",\r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pressa-exam.herokuapp.com/login",
+							"protocol": "https",
+							"host": [
+								"pressa-exam",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						},
+						"description": "Login admin to get token"
+					},
+					"response": [
+						{
+							"name": "Login admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"salim\",\r\n    \"password\": \"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/login",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "165"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"a5-KprjWrStq5BkSabcbb3XcTxGzNo\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 21:30:29 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"ok\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwNDIyMjl9.x0flzl_8ltiCsEPYdchUiTyULeJeyiH2IaCcyDVkyPA\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Get categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pressa-exam.herokuapp.com/categories",
+							"protocol": "https",
+							"host": [
+								"pressa-exam",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories"
+							]
+						},
+						"description": "Get categories"
+					},
+					"response": [
+						{
+							"name": "Get categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/categories",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1710"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"6ae-6CiSBBRn4M+n3nXFRCnaQmtJlX4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 22:12:26 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"ok\",\n    \"data\": [\n        {\n            \"category_id\": 1,\n            \"category_name\": \"Information Technologies\",\n            \"status\": \"active\",\n            \"created_at\": \"2022-10-17T21:14:26.325Z\",\n            \"subcategories\": [\n                {\n                    \"sub_category_id\": 1,\n                    \"sub_category_name\": \"Web dasturlash\",\n                    \"status\": \"active\",\n                    \"created_at\": \"2022-10-17T21:14:41.167757\"\n                },\n                {\n                    \"sub_category_id\": 2,\n                    \"sub_category_name\": \"Mobile dasturlash\",\n                    \"status\": \"active\",\n                    \"created_at\": \"2022-10-17T21:14:41.167757\"\n                }\n            ]\n        },\n        {\n            \"category_id\": 2,\n            \"category_name\": \"Design\",\n            \"status\": \"active\",\n            \"created_at\": \"2022-10-17T21:14:26.325Z\",\n            \"subcategories\": [\n                {\n                    \"sub_category_id\": 3,\n                    \"sub_category_name\": \"UI/UX dizayn\",\n                    \"status\": \"active\",\n                    \"created_at\": \"2022-10-17T21:14:41.167757\"\n                },\n                {\n                    \"sub_category_id\": 4,\n                    \"sub_category_name\": \"Grafik dizayn\",\n                    \"status\": \"active\",\n                    \"created_at\": \"2022-10-17T21:14:41.167757\"\n                }\n            ]\n        },\n        {\n            \"category_id\": 3,\n            \"category_name\": \"Bussiness\",\n            \"status\": \"active\",\n            \"created_at\": \"2022-10-17T21:14:26.325Z\",\n            \"subcategories\": [\n                {\n                    \"sub_category_id\": 5,\n                    \"sub_category_name\": \"Menejment\",\n                    \"status\": \"active\",\n                    \"created_at\": \"2022-10-17T21:14:41.167757\"\n                },\n                {\n                    \"sub_category_id\": 6,\n                    \"sub_category_name\": \"Kredit va audit\",\n                    \"status\": \"active\",\n                    \"created_at\": \"2022-10-17T21:14:41.167757\"\n                }\n            ]\n        },\n        {\n            \"category_id\": 4,\n            \"category_name\": \"Education\",\n            \"status\": \"active\",\n            \"created_at\": \"2022-10-17T21:14:26.325Z\",\n            \"subcategories\": [\n                {\n                    \"sub_category_id\": 7,\n                    \"sub_category_name\": \"Matematika\",\n                    \"status\": \"active\",\n                    \"created_at\": \"2022-10-17T21:14:41.167757\"\n                },\n                {\n                    \"sub_category_id\": 8,\n                    \"sub_category_name\": \"Fizika\",\n                    \"status\": \"active\",\n                    \"created_at\": \"2022-10-17T21:14:41.167757\"\n                }\n            ]\n        },\n        {\n            \"category_id\": 5,\n            \"category_name\": \"SMM\",\n            \"status\": \"active\",\n            \"created_at\": \"2022-10-17T21:31:24.810Z\",\n            \"subcategories\": [\n                {\n                    \"sub_category_id\": 9,\n                    \"sub_category_name\": \"Instagramda smm\",\n                    \"status\": \"active\",\n                    \"created_at\": \"2022-10-17T21:32:14.529512\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get category by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pressa-exam.herokuapp.com/categories/2",
+							"protocol": "https",
+							"host": [
+								"pressa-exam",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get category by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/categories/2",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"categories",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "392"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"188-1tcvCWAzMH8p8N3iQKLSoVVj23w\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 21:31:05 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"ok\",\n    \"data\": [\n        {\n            \"category_id\": 2,\n            \"category_name\": \"Design\",\n            \"status\": \"active\",\n            \"created_at\": \"2022-10-17T21:14:26.325Z\",\n            \"subcategories\": [\n                {\n                    \"sub_category_id\": 3,\n                    \"sub_category_name\": \"UI/UX dizayn\",\n                    \"status\": \"active\",\n                    \"created_at\": \"2022-10-17T21:14:41.167757\"\n                },\n                {\n                    \"sub_category_id\": 4,\n                    \"sub_category_name\": \"Grafik dizayn\",\n                    \"status\": \"active\",\n                    \"created_at\": \"2022-10-17T21:14:41.167757\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "POST category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwNDIyMjl9.x0flzl_8ltiCsEPYdchUiTyULeJeyiH2IaCcyDVkyPA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryName\": \"SMM\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pressa-exam.herokuapp.com/admin/categories",
+							"protocol": "https",
+							"host": [
+								"pressa-exam",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwNDIyMjl9.x0flzl_8ltiCsEPYdchUiTyULeJeyiH2IaCcyDVkyPA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryName\": \"SMM\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/admin/categories",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"admin",
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"5e-AjNLcZCxje8QNcTeSRohPB+kkkI\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 21:31:24 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"message\": \"new category created\",\n    \"data\": {\n        \"category_id\": 5,\n        \"category_name\": \"SMM\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "PUT category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwNDIyMjl9.x0flzl_8ltiCsEPYdchUiTyULeJeyiH2IaCcyDVkyPA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryName\": \"SMM marketing\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pressa-exam.herokuapp.com/admin/categories/5",
+							"protocol": "https",
+							"host": [
+								"pressa-exam",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"categories",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PUT category",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwNDIyMjl9.x0flzl_8ltiCsEPYdchUiTyULeJeyiH2IaCcyDVkyPA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryName\": \"SMM marketing\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/admin/categories/5",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"admin",
+										"categories",
+										"5"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "100"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"64-n8Q6E9IMYAz6vitUb5vA4MbxqMg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 22:13:00 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"message\": \"category updated\",\n    \"data\": {\n        \"category_id\": 5,\n        \"category_name\": \"SMM marketing\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Subcategories",
+			"item": [
+				{
+					"name": "Get subcategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pressa-exam.herokuapp.com/subcategories",
+							"protocol": "https",
+							"host": [
+								"pressa-exam",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"subcategories"
+							]
+						},
+						"description": "Get categories"
+					},
+					"response": [
+						{
+							"name": "Get subcategories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/subcategories",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"subcategories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1219"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"4c3-JeEhTTMml3FO5FlCuDW+mNycLEY\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 22:16:20 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"ok\",\n    \"data\": [\n        {\n            \"sub_category_id\": 1,\n            \"sub_category_name\": \"Web dasturlash\",\n            \"category_id\": 1,\n            \"status\": \"active\",\n            \"created_at\": \"2022-10-17T21:14:41.167Z\"\n        },\n        {\n            \"sub_category_id\": 2,\n            \"sub_category_name\": \"Mobile dasturlash\",\n            \"category_id\": 1,\n            \"status\": \"active\",\n            \"created_at\": \"2022-10-17T21:14:41.167Z\"\n        },\n        {\n            \"sub_category_id\": 3,\n            \"sub_category_name\": \"UI/UX dizayn\",\n            \"category_id\": 2,\n            \"status\": \"active\",\n            \"created_at\": \"2022-10-17T21:14:41.167Z\"\n        },\n        {\n            \"sub_category_id\": 4,\n            \"sub_category_name\": \"Grafik dizayn\",\n            \"category_id\": 2,\n            \"status\": \"active\",\n            \"created_at\": \"2022-10-17T21:14:41.167Z\"\n        },\n        {\n            \"sub_category_id\": 5,\n            \"sub_category_name\": \"Menejment\",\n            \"category_id\": 3,\n            \"status\": \"active\",\n            \"created_at\": \"2022-10-17T21:14:41.167Z\"\n        },\n        {\n            \"sub_category_id\": 6,\n            \"sub_category_name\": \"Kredit va audit\",\n            \"category_id\": 3,\n            \"status\": \"active\",\n            \"created_at\": \"2022-10-17T21:14:41.167Z\"\n        },\n        {\n            \"sub_category_id\": 7,\n            \"sub_category_name\": \"Matematika\",\n            \"category_id\": 4,\n            \"status\": \"active\",\n            \"created_at\": \"2022-10-17T21:14:41.167Z\"\n        },\n        {\n            \"sub_category_id\": 8,\n            \"sub_category_name\": \"Tarix\",\n            \"category_id\": 4,\n            \"status\": \"active\",\n            \"created_at\": \"2022-10-17T21:14:41.167Z\"\n        },\n        {\n            \"sub_category_id\": 9,\n            \"sub_category_name\": \"Instagramda smm\",\n            \"category_id\": 5,\n            \"status\": \"active\",\n            \"created_at\": \"2022-10-17T21:32:14.529Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get subcategory by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://pressa-exam.herokuapp.com/subcategories/3",
+							"protocol": "https",
+							"host": [
+								"pressa-exam",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"subcategories",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get subcategory by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/subcategories/3",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"subcategories",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "169"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"a9-7kfRwlbHBB0sXztouMuKU0yqxeo\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 21:31:54 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"ok\",\n    \"data\": [\n        {\n            \"sub_category_id\": 3,\n            \"sub_category_name\": \"UI/UX dizayn\",\n            \"category_id\": 2,\n            \"status\": \"active\",\n            \"created_at\": \"2022-10-17T21:14:41.167Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "POST subcategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwMzg1OTN9.7LWlio1VJdTN8MGek96V76vdqtnXol6qM-CYOvVo93k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subcategoryName\": \"Instagramda smm\",\r\n    \"categoryId\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pressa-exam.herokuapp.com/admin/subcategories",
+							"protocol": "https",
+							"host": [
+								"pressa-exam",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"subcategories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST subcategory",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwMzg1OTN9.7LWlio1VJdTN8MGek96V76vdqtnXol6qM-CYOvVo93k",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"subcategoryName\": \"Instagramda smm\",\r\n    \"categoryId\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/admin/subcategories",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"admin",
+										"subcategories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "133"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"85-5mHDeVp/98Qnj1YMCjRE32hnGgs\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 21:32:14 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"message\": \"new subcategory created\",\n    \"data\": {\n        \"sub_category_id\": 9,\n        \"sub_category_name\": \"Instagramda smm\",\n        \"category_id\": 5\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "PUT subcategory",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwMzg1OTN9.7LWlio1VJdTN8MGek96V76vdqtnXol6qM-CYOvVo93k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subcategoryName\": \"Tarix\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pressa-exam.herokuapp.com/admin/subcategories/8",
+							"protocol": "https",
+							"host": [
+								"pressa-exam",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"subcategories",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PUT subcategory",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwMzg1OTN9.7LWlio1VJdTN8MGek96V76vdqtnXol6qM-CYOvVo93k",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"subcategoryName\": \"Tarix\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/admin/subcategories/8",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"admin",
+										"subcategories",
+										"8"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "119"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"77-C9AvF1OXbYmLhSfc8/iPb5xGgCg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 22:16:17 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"message\": \"subcategory updated\",\n    \"data\": {\n        \"sub_category_id\": 8,\n        \"sub_category_name\": \"Tarix\",\n        \"category_id\": 4\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "Events by query",
+					"item": [
+						{
+							"name": "By categoryId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/events?categoryId=2",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"events"
+									],
+									"query": [
+										{
+											"key": "categoryId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "By categoryId",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://pressa-exam.herokuapp.com/events?categoryId=2",
+											"protocol": "https",
+											"host": [
+												"pressa-exam",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"events"
+											],
+											"query": [
+												{
+													"key": "categoryId",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Cowboy"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "4103"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"1007-Hc0tPDTulThmJWtv9yWlCgJLuPs\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 17 Oct 2022 21:32:31 GMT"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 vegur"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"ok\",\n    \"data\": [\n        {\n            \"event_id\": 2,\n            \"to_char\": \"21/10/2022\",\n            \"event_time\": \"15:00:00\",\n            \"event_type\": \"offline\",\n            \"event_link\": \"https://www.youtube.com/liver24\",\n            \"category_id\": 2,\n            \"sub_category_id\": 3,\n            \"views\": 0,\n            \"organizer\": [\n                {\n                    \"organizer_id\": 2,\n                    \"legal_name\": null,\n                    \"organizer_fullname\": \"Sadoqat Kaziyeva\",\n                    \"profession\": \"UI/UX designer\",\n                    \"contact\": \"998910097609\",\n                    \"contact_extra\": \"998904567814\",\n                    \"organizer_type\": \"physical\"\n                }\n            ],\n            \"post\": [\n                {\n                    \"post_id\": 2,\n                    \"title\": \"Sadoqat Kaziyevadan UI/UX bo'yicha master klass\",\n                    \"descriptions\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\",\n                    \"body\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\\r\\nKuni kecha bo'lib o'tgan uchrashuvda to'rt kishidan iborat 8 ta guruh tashkil qilinib, ularga ikki hafta muddat ichida Toshkent shahridagi har qanday onlayn va oflayn tadbirlar to'g'risida e'lonli ma'lumot beruvchi uch bosqichli veb sahifa tayyorlash vazifasi topshirildi.\\r\\n\\r\\nDemak, roppa-rosa 2 haftadan keyin ishtirokchilarning qilgan ishlari chetdan kelgan mehmonlar tomonidan xolis baholanib, dastlabki uchta o'rin egalari qimmatbaho sovg'alar bilan taqdirlanadi. Biz barchaga omad tilab qolamiz.\",\n                    \"post_img\": \"https://s3-alpha-sig.figma.com/img/9e8e/a97a/028d8c780bfacf1cfb5fca1b874cded2?Expires=1666569600&Signature=HKJ84TQps9ANTypLa6bnWo3zUNLjthlbmdBR3HrBXybV3AcXw~j153ym~fMvSsiZlfVlDf2BVlzDIgt0Ho1Dw2OttbdUzjQZfUWHpLsXXjbzVVNam-gnox3hDwJv5tFP9KeCOAid3-IiC90YbiVREvpiXtqATaa0X4kDWY5uYkJjdkOqXIWsDqk8W6VJ-fSVhJII~Ssyc~RY7lYRIvwXrDs~brv-UI2g6QT8ZW8vD5aoLPjmfqdPmSEwcTF29U0-bNa8J8TOKpKl4QzwLtQpmbRE4-Z0M-d-JaHVUr5h7cVk~QTc1tQz5VF6ZwjmKHO~7N~tpMrcb-u0r-SpCDTx9Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA\"\n                }\n            ]\n        },\n        {\n            \"event_id\": 4,\n            \"to_char\": \"17/01/2022\",\n            \"event_time\": \"15:00:00\",\n            \"event_type\": \"offline\",\n            \"event_link\": \"https://www.youtube.com/liver24\",\n            \"category_id\": 2,\n            \"sub_category_id\": 4,\n            \"views\": 0,\n            \"organizer\": [\n                {\n                    \"organizer_id\": 4,\n                    \"legal_name\": \"Najot ta'lim\",\n                    \"organizer_fullname\": \"Jahongir G'lomov\",\n                    \"profession\": \"Grafik designer\",\n                    \"contact\": \"998910097609\",\n                    \"contact_extra\": \"998904567814\",\n                    \"organizer_type\": \"legal\"\n                }\n            ],\n            \"post\": [\n                {\n                    \"post_id\": 4,\n                    \"title\": \"Jahongir G'ulamovdan dizayn sohasi bo'yicha master klass\",\n                    \"descriptions\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\",\n                    \"body\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\\r\\nKuni kecha bo'lib o'tgan uchrashuvda to'rt kishidan iborat 8 ta guruh tashkil qilinib, ularga ikki hafta muddat ichida Toshkent shahridagi har qanday onlayn va oflayn tadbirlar to'g'risida e'lonli ma'lumot beruvchi uch bosqichli veb sahifa tayyorlash vazifasi topshirildi.\\r\\n\\r\\nDemak, roppa-rosa 2 haftadan keyin ishtirokchilarning qilgan ishlari chetdan kelgan mehmonlar tomonidan xolis baholanib, dastlabki uchta o'rin egalari qimmatbaho sovg'alar bilan taqdirlanadi. Biz barchaga omad tilab qolamiz.\",\n                    \"post_img\": \"https://s3-alpha-sig.figma.com/img/6b5a/892f/0a27407ff7160f9f64b75ff794680bf5?Expires=1666569600&Signature=Qyir2EcaZB5Ch97jIally8cwKUQv6dpaQJGMhT81FwyLRaSyIiINARhnm7ysnbo6Wjl-ENmZNizv3QbGO8rF-Ustxc63Jyz5G7s9aJch88zYGl0vKLLjQdI8mtKTGGu45rzN-iKDrLQDOv4rw6oGjv8L4BhVTgrO2fUQ8dFnvoa6Cy39of1UvJPBb~wZ7ggh2v14YS4F9Vkxj1F8Kn11VZvFr5urazHNuXSG-izDUjQ1xS2a5rpHBgykPj94cyznBlMZHg~Zs4SWdZ960awqnIUdg0yZ8q2YZ3wzkwkG8XKVMY8pF4hcOZubUS5Zi8wqNsi78G5-6f43OWJb6hmyYA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA\"\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "By subcategoryId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/events?subcategoryId=1",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"events"
+									],
+									"query": [
+										{
+											"key": "subcategoryId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "By subcategoryId",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://pressa-exam.herokuapp.com/events?subcategoryId=1",
+											"protocol": "https",
+											"host": [
+												"pressa-exam",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"events"
+											],
+											"query": [
+												{
+													"key": "subcategoryId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Cowboy"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2057"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"809-tSb9vWIGl9BD4nC3K1Yd5CFAxI4\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 17 Oct 2022 21:32:45 GMT"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 vegur"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"ok\",\n    \"data\": [\n        {\n            \"event_id\": 1,\n            \"to_char\": \"17/01/2022\",\n            \"event_time\": \"15:00:00\",\n            \"event_type\": \"online\",\n            \"event_link\": \"https://www.youtube.com/liver24\",\n            \"category_id\": 1,\n            \"sub_category_id\": 1,\n            \"views\": 1,\n            \"organizer\": [\n                {\n                    \"organizer_id\": 1,\n                    \"legal_name\": null,\n                    \"organizer_fullname\": \"Alisher Isaev\",\n                    \"profession\": \"Tadbirkor\",\n                    \"contact\": \"998903451245\",\n                    \"contact_extra\": \"998945557585\",\n                    \"organizer_type\": \"physical\"\n                }\n            ],\n            \"post\": [\n                {\n                    \"post_id\": 1,\n                    \"title\": \"Alisher Isaevdan biznes va IT bo'yicha master klass\",\n                    \"descriptions\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\",\n                    \"body\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\\r\\nKuni kecha bo'lib o'tgan uchrashuvda to'rt kishidan iborat 8 ta guruh tashkil qilinib, ularga ikki hafta muddat ichida Toshkent shahridagi har qanday onlayn va oflayn tadbirlar to'g'risida e'lonli ma'lumot beruvchi uch bosqichli veb sahifa tayyorlash vazifasi topshirildi.\\r\\n\\r\\nDemak, roppa-rosa 2 haftadan keyin ishtirokchilarning qilgan ishlari chetdan kelgan mehmonlar tomonidan xolis baholanib, dastlabki uchta o'rin egalari qimmatbaho sovg'alar bilan taqdirlanadi. Biz barchaga omad tilab qolamiz.\",\n                    \"post_img\": \"https://s3-alpha-sig.figma.com/img/372b/e1ce/fa68fc76741d2c97416dd18326a974a5?Expires=1666569600&Signature=WokZvNm8uEKU4xw3j~mAB51jFdYD4MvOIKghmiUnoglQu11kwGAdTuAVeSGFK20DGkSYMWmCGMM6QLn~XeRoaez7iUHz2RiuiB-Qc~jzCZNYhWvFBhAagkdB7ui4mb0CmWwvEnQW1zyIg8GpctH~qjziuHc8PoF1F2Zx4VCJcpMGgMPQw3ixqnt8MPKv1Oxg~cq3NsuBKJaOx84Qz7hxNu-4bcAT8x3Mqs9vkG5TX-BUnn2Z~Ippa2QfJlyrRF9I38oXFLWlXquCGmd5pSnzdSH~62HLHbYqjknI5ou-oDA3A~gzfHMJ0Znj0RKsf7yV3nQNS8DhFOogX~2~fulzdA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA\"\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "By date",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/events?date=17/01/2022",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"events"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "17/01/2022"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "By date",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://pressa-exam.herokuapp.com/events?date=17/01/2022",
+											"protocol": "https",
+											"host": [
+												"pressa-exam",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"events"
+											],
+											"query": [
+												{
+													"key": "date",
+													"value": "17/01/2022"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Cowboy"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "6122"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"17ea-exAQ1sH5S88WvQV/y4ZjtGax9/o\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 17 Oct 2022 21:32:54 GMT"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 vegur"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"ok\",\n    \"data\": [\n        {\n            \"event_id\": 1,\n            \"to_char\": \"17/01/2022\",\n            \"event_time\": \"15:00:00\",\n            \"event_type\": \"online\",\n            \"event_link\": \"https://www.youtube.com/liver24\",\n            \"category_id\": 1,\n            \"sub_category_id\": 1,\n            \"views\": 1,\n            \"organizer\": [\n                {\n                    \"organizer_id\": 1,\n                    \"legal_name\": null,\n                    \"organizer_fullname\": \"Alisher Isaev\",\n                    \"profession\": \"Tadbirkor\",\n                    \"contact\": \"998903451245\",\n                    \"contact_extra\": \"998945557585\",\n                    \"organizer_type\": \"physical\"\n                }\n            ],\n            \"post\": [\n                {\n                    \"post_id\": 1,\n                    \"title\": \"Alisher Isaevdan biznes va IT bo'yicha master klass\",\n                    \"descriptions\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\",\n                    \"body\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\\r\\nKuni kecha bo'lib o'tgan uchrashuvda to'rt kishidan iborat 8 ta guruh tashkil qilinib, ularga ikki hafta muddat ichida Toshkent shahridagi har qanday onlayn va oflayn tadbirlar to'g'risida e'lonli ma'lumot beruvchi uch bosqichli veb sahifa tayyorlash vazifasi topshirildi.\\r\\n\\r\\nDemak, roppa-rosa 2 haftadan keyin ishtirokchilarning qilgan ishlari chetdan kelgan mehmonlar tomonidan xolis baholanib, dastlabki uchta o'rin egalari qimmatbaho sovg'alar bilan taqdirlanadi. Biz barchaga omad tilab qolamiz.\",\n                    \"post_img\": \"https://s3-alpha-sig.figma.com/img/372b/e1ce/fa68fc76741d2c97416dd18326a974a5?Expires=1666569600&Signature=WokZvNm8uEKU4xw3j~mAB51jFdYD4MvOIKghmiUnoglQu11kwGAdTuAVeSGFK20DGkSYMWmCGMM6QLn~XeRoaez7iUHz2RiuiB-Qc~jzCZNYhWvFBhAagkdB7ui4mb0CmWwvEnQW1zyIg8GpctH~qjziuHc8PoF1F2Zx4VCJcpMGgMPQw3ixqnt8MPKv1Oxg~cq3NsuBKJaOx84Qz7hxNu-4bcAT8x3Mqs9vkG5TX-BUnn2Z~Ippa2QfJlyrRF9I38oXFLWlXquCGmd5pSnzdSH~62HLHbYqjknI5ou-oDA3A~gzfHMJ0Znj0RKsf7yV3nQNS8DhFOogX~2~fulzdA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA\"\n                }\n            ]\n        },\n        {\n            \"event_id\": 3,\n            \"to_char\": \"17/01/2022\",\n            \"event_time\": \"21:00:00\",\n            \"event_type\": \"online\",\n            \"event_link\": \"https://www.youtube.com/liver24\",\n            \"category_id\": 3,\n            \"sub_category_id\": 5,\n            \"views\": 0,\n            \"organizer\": [\n                {\n                    \"organizer_id\": 3,\n                    \"legal_name\": \"Biznes school\",\n                    \"organizer_fullname\": \"MuhammadAli Eshonqulov\",\n                    \"profession\": \"Biznesmen\",\n                    \"contact\": \"998971234567\",\n                    \"contact_extra\": \"999338915634\",\n                    \"organizer_type\": \"legal\"\n                }\n            ],\n            \"post\": [\n                {\n                    \"post_id\": 3,\n                    \"title\": \"Yuksalish loyihasi AQSHda ovozli suhbat\",\n                    \"descriptions\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\",\n                    \"body\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\\r\\nKuni kecha bo'lib o'tgan uchrashuvda to'rt kishidan iborat 8 ta guruh tashkil qilinib, ularga ikki hafta muddat ichida Toshkent shahridagi har qanday onlayn va oflayn tadbirlar to'g'risida e'lonli ma'lumot beruvchi uch bosqichli veb sahifa tayyorlash vazifasi topshirildi.\\r\\n\\r\\nDemak, roppa-rosa 2 haftadan keyin ishtirokchilarning qilgan ishlari chetdan kelgan mehmonlar tomonidan xolis baholanib, dastlabki uchta o'rin egalari qimmatbaho sovg'alar bilan taqdirlanadi. Biz barchaga omad tilab qolamiz.\",\n                    \"post_img\": \"https://s3-alpha-sig.figma.com/img/0453/16b7/a792c07263af12a93e6a515560be941f?Expires=1666569600&Signature=TRWRTW~OQeIihF3Qsiu7~kD-jj4ViNFDDd9wX956Nh5vSKG6-yrjLvlke4ctrNg7-zEjK1rVIEyuDyG5qcaFbBgi~~HucBCtSs6~CeXahMnEAPFGY-gB0kTw1tlJBopMlbIfXciqh3lmZ~J4P0S~CH6nhncpvYKV9ieDJMnzR~XcUeE2qhxcdn8c4Qt8DjjGT8QGHAIiUoxD9wbBi~Idsy7rZsxmROLYc6G3sWlJPko~bYbR3W9fgsNrPdF9pncYJwuq~vphRoa-~N0TWrwsXfB1KJgGDgV8qIslKZKzzb~suuY0K8pglURgvJPXu8Zz4M9P~CVLAdZhq8aBUrDJzg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA\"\n                }\n            ]\n        },\n        {\n            \"event_id\": 4,\n            \"to_char\": \"17/01/2022\",\n            \"event_time\": \"15:00:00\",\n            \"event_type\": \"offline\",\n            \"event_link\": \"https://www.youtube.com/liver24\",\n            \"category_id\": 2,\n            \"sub_category_id\": 4,\n            \"views\": 0,\n            \"organizer\": [\n                {\n                    \"organizer_id\": 4,\n                    \"legal_name\": \"Najot ta'lim\",\n                    \"organizer_fullname\": \"Jahongir G'lomov\",\n                    \"profession\": \"Grafik designer\",\n                    \"contact\": \"998910097609\",\n                    \"contact_extra\": \"998904567814\",\n                    \"organizer_type\": \"legal\"\n                }\n            ],\n            \"post\": [\n                {\n                    \"post_id\": 4,\n                    \"title\": \"Jahongir G'ulamovdan dizayn sohasi bo'yicha master klass\",\n                    \"descriptions\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\",\n                    \"body\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\\r\\nKuni kecha bo'lib o'tgan uchrashuvda to'rt kishidan iborat 8 ta guruh tashkil qilinib, ularga ikki hafta muddat ichida Toshkent shahridagi har qanday onlayn va oflayn tadbirlar to'g'risida e'lonli ma'lumot beruvchi uch bosqichli veb sahifa tayyorlash vazifasi topshirildi.\\r\\n\\r\\nDemak, roppa-rosa 2 haftadan keyin ishtirokchilarning qilgan ishlari chetdan kelgan mehmonlar tomonidan xolis baholanib, dastlabki uchta o'rin egalari qimmatbaho sovg'alar bilan taqdirlanadi. Biz barchaga omad tilab qolamiz.\",\n                    \"post_img\": \"https://s3-alpha-sig.figma.com/img/6b5a/892f/0a27407ff7160f9f64b75ff794680bf5?Expires=1666569600&Signature=Qyir2EcaZB5Ch97jIally8cwKUQv6dpaQJGMhT81FwyLRaSyIiINARhnm7ysnbo6Wjl-ENmZNizv3QbGO8rF-Ustxc63Jyz5G7s9aJch88zYGl0vKLLjQdI8mtKTGGu45rzN-iKDrLQDOv4rw6oGjv8L4BhVTgrO2fUQ8dFnvoa6Cy39of1UvJPBb~wZ7ggh2v14YS4F9Vkxj1F8Kn11VZvFr5urazHNuXSG-izDUjQ1xS2a5rpHBgykPj94cyznBlMZHg~Zs4SWdZ960awqnIUdg0yZ8q2YZ3wzkwkG8XKVMY8pF4hcOZubUS5Zi8wqNsi78G5-6f43OWJb6hmyYA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA\"\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "By type",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/events?eventType=offline",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"events"
+									],
+									"query": [
+										{
+											"key": "eventType",
+											"value": "offline"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "By type",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://pressa-exam.herokuapp.com/events?eventType=offline",
+											"protocol": "https",
+											"host": [
+												"pressa-exam",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"events"
+											],
+											"query": [
+												{
+													"key": "eventType",
+													"value": "offline"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Cowboy"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "4103"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"1007-Hc0tPDTulThmJWtv9yWlCgJLuPs\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 17 Oct 2022 21:33:03 GMT"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 vegur"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"ok\",\n    \"data\": [\n        {\n            \"event_id\": 2,\n            \"to_char\": \"21/10/2022\",\n            \"event_time\": \"15:00:00\",\n            \"event_type\": \"offline\",\n            \"event_link\": \"https://www.youtube.com/liver24\",\n            \"category_id\": 2,\n            \"sub_category_id\": 3,\n            \"views\": 0,\n            \"organizer\": [\n                {\n                    \"organizer_id\": 2,\n                    \"legal_name\": null,\n                    \"organizer_fullname\": \"Sadoqat Kaziyeva\",\n                    \"profession\": \"UI/UX designer\",\n                    \"contact\": \"998910097609\",\n                    \"contact_extra\": \"998904567814\",\n                    \"organizer_type\": \"physical\"\n                }\n            ],\n            \"post\": [\n                {\n                    \"post_id\": 2,\n                    \"title\": \"Sadoqat Kaziyevadan UI/UX bo'yicha master klass\",\n                    \"descriptions\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\",\n                    \"body\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\\r\\nKuni kecha bo'lib o'tgan uchrashuvda to'rt kishidan iborat 8 ta guruh tashkil qilinib, ularga ikki hafta muddat ichida Toshkent shahridagi har qanday onlayn va oflayn tadbirlar to'g'risida e'lonli ma'lumot beruvchi uch bosqichli veb sahifa tayyorlash vazifasi topshirildi.\\r\\n\\r\\nDemak, roppa-rosa 2 haftadan keyin ishtirokchilarning qilgan ishlari chetdan kelgan mehmonlar tomonidan xolis baholanib, dastlabki uchta o'rin egalari qimmatbaho sovg'alar bilan taqdirlanadi. Biz barchaga omad tilab qolamiz.\",\n                    \"post_img\": \"https://s3-alpha-sig.figma.com/img/9e8e/a97a/028d8c780bfacf1cfb5fca1b874cded2?Expires=1666569600&Signature=HKJ84TQps9ANTypLa6bnWo3zUNLjthlbmdBR3HrBXybV3AcXw~j153ym~fMvSsiZlfVlDf2BVlzDIgt0Ho1Dw2OttbdUzjQZfUWHpLsXXjbzVVNam-gnox3hDwJv5tFP9KeCOAid3-IiC90YbiVREvpiXtqATaa0X4kDWY5uYkJjdkOqXIWsDqk8W6VJ-fSVhJII~Ssyc~RY7lYRIvwXrDs~brv-UI2g6QT8ZW8vD5aoLPjmfqdPmSEwcTF29U0-bNa8J8TOKpKl4QzwLtQpmbRE4-Z0M-d-JaHVUr5h7cVk~QTc1tQz5VF6ZwjmKHO~7N~tpMrcb-u0r-SpCDTx9Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA\"\n                }\n            ]\n        },\n        {\n            \"event_id\": 4,\n            \"to_char\": \"17/01/2022\",\n            \"event_time\": \"15:00:00\",\n            \"event_type\": \"offline\",\n            \"event_link\": \"https://www.youtube.com/liver24\",\n            \"category_id\": 2,\n            \"sub_category_id\": 4,\n            \"views\": 0,\n            \"organizer\": [\n                {\n                    \"organizer_id\": 4,\n                    \"legal_name\": \"Najot ta'lim\",\n                    \"organizer_fullname\": \"Jahongir G'lomov\",\n                    \"profession\": \"Grafik designer\",\n                    \"contact\": \"998910097609\",\n                    \"contact_extra\": \"998904567814\",\n                    \"organizer_type\": \"legal\"\n                }\n            ],\n            \"post\": [\n                {\n                    \"post_id\": 4,\n                    \"title\": \"Jahongir G'ulamovdan dizayn sohasi bo'yicha master klass\",\n                    \"descriptions\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\",\n                    \"body\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\\r\\nKuni kecha bo'lib o'tgan uchrashuvda to'rt kishidan iborat 8 ta guruh tashkil qilinib, ularga ikki hafta muddat ichida Toshkent shahridagi har qanday onlayn va oflayn tadbirlar to'g'risida e'lonli ma'lumot beruvchi uch bosqichli veb sahifa tayyorlash vazifasi topshirildi.\\r\\n\\r\\nDemak, roppa-rosa 2 haftadan keyin ishtirokchilarning qilgan ishlari chetdan kelgan mehmonlar tomonidan xolis baholanib, dastlabki uchta o'rin egalari qimmatbaho sovg'alar bilan taqdirlanadi. Biz barchaga omad tilab qolamiz.\",\n                    \"post_img\": \"https://s3-alpha-sig.figma.com/img/6b5a/892f/0a27407ff7160f9f64b75ff794680bf5?Expires=1666569600&Signature=Qyir2EcaZB5Ch97jIally8cwKUQv6dpaQJGMhT81FwyLRaSyIiINARhnm7ysnbo6Wjl-ENmZNizv3QbGO8rF-Ustxc63Jyz5G7s9aJch88zYGl0vKLLjQdI8mtKTGGu45rzN-iKDrLQDOv4rw6oGjv8L4BhVTgrO2fUQ8dFnvoa6Cy39of1UvJPBb~wZ7ggh2v14YS4F9Vkxj1F8Kn11VZvFr5urazHNuXSG-izDUjQ1xS2a5rpHBgykPj94cyznBlMZHg~Zs4SWdZ960awqnIUdg0yZ8q2YZ3wzkwkG8XKVMY8pF4hcOZubUS5Zi8wqNsi78G5-6f43OWJb6hmyYA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA\"\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "By date and subcategoryId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/events?date=17/01/2022&subcategoryId=4",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"events"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "17/01/2022"
+										},
+										{
+											"key": "subcategoryId",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "By date and subcategoryId",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://pressa-exam.herokuapp.com/events?date=17/01/2022&subcategoryId=4",
+											"protocol": "https",
+											"host": [
+												"pressa-exam",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"events"
+											],
+											"query": [
+												{
+													"key": "date",
+													"value": "17/01/2022"
+												},
+												{
+													"key": "subcategoryId",
+													"value": "4"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Cowboy"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2079"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"81f-odHZln6PQsx26GLtyj7vxKyycXg\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 17 Oct 2022 21:33:17 GMT"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 vegur"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"ok\",\n    \"data\": [\n        {\n            \"event_id\": 4,\n            \"to_char\": \"17/01/2022\",\n            \"event_time\": \"15:00:00\",\n            \"event_type\": \"offline\",\n            \"event_link\": \"https://www.youtube.com/liver24\",\n            \"category_id\": 2,\n            \"sub_category_id\": 4,\n            \"views\": 0,\n            \"organizer\": [\n                {\n                    \"organizer_id\": 4,\n                    \"legal_name\": \"Najot ta'lim\",\n                    \"organizer_fullname\": \"Jahongir G'lomov\",\n                    \"profession\": \"Grafik designer\",\n                    \"contact\": \"998910097609\",\n                    \"contact_extra\": \"998904567814\",\n                    \"organizer_type\": \"legal\"\n                }\n            ],\n            \"post\": [\n                {\n                    \"post_id\": 4,\n                    \"title\": \"Jahongir G'ulamovdan dizayn sohasi bo'yicha master klass\",\n                    \"descriptions\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\",\n                    \"body\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\\r\\nKuni kecha bo'lib o'tgan uchrashuvda to'rt kishidan iborat 8 ta guruh tashkil qilinib, ularga ikki hafta muddat ichida Toshkent shahridagi har qanday onlayn va oflayn tadbirlar to'g'risida e'lonli ma'lumot beruvchi uch bosqichli veb sahifa tayyorlash vazifasi topshirildi.\\r\\n\\r\\nDemak, roppa-rosa 2 haftadan keyin ishtirokchilarning qilgan ishlari chetdan kelgan mehmonlar tomonidan xolis baholanib, dastlabki uchta o'rin egalari qimmatbaho sovg'alar bilan taqdirlanadi. Biz barchaga omad tilab qolamiz.\",\n                    \"post_img\": \"https://s3-alpha-sig.figma.com/img/6b5a/892f/0a27407ff7160f9f64b75ff794680bf5?Expires=1666569600&Signature=Qyir2EcaZB5Ch97jIally8cwKUQv6dpaQJGMhT81FwyLRaSyIiINARhnm7ysnbo6Wjl-ENmZNizv3QbGO8rF-Ustxc63Jyz5G7s9aJch88zYGl0vKLLjQdI8mtKTGGu45rzN-iKDrLQDOv4rw6oGjv8L4BhVTgrO2fUQ8dFnvoa6Cy39of1UvJPBb~wZ7ggh2v14YS4F9Vkxj1F8Kn11VZvFr5urazHNuXSG-izDUjQ1xS2a5rpHBgykPj94cyznBlMZHg~Zs4SWdZ960awqnIUdg0yZ8q2YZ3wzkwkG8XKVMY8pF4hcOZubUS5Zi8wqNsi78G5-6f43OWJb6hmyYA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA\"\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pressa-exam.herokuapp.com/events",
+							"protocol": "https",
+							"host": [
+								"pressa-exam",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get events",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/events",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"events"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "8872"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"22a8-n/0CiKjmNt+YP6S/lObJ5iLNv1U\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 22:02:19 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"ok\",\n    \"data\": [\n        {\n            \"event_id\": 1,\n            \"to_char\": \"17/01/2022\",\n            \"event_time\": \"15:00:00\",\n            \"event_type\": \"online\",\n            \"event_link\": \"https://www.youtube.com/liver24\",\n            \"category_id\": 1,\n            \"sub_category_id\": 1,\n            \"views\": 6,\n            \"organizer\": [\n                {\n                    \"organizer_id\": 1,\n                    \"legal_name\": null,\n                    \"organizer_fullname\": \"Alisher Isaev\",\n                    \"profession\": \"Tadbirkor\",\n                    \"contact\": \"998903451245\",\n                    \"contact_extra\": \"998945557585\",\n                    \"organizer_type\": \"physical\"\n                }\n            ],\n            \"post\": [\n                {\n                    \"post_id\": 1,\n                    \"title\": \"Alisher Isaevdan biznes va IT bo'yicha master klass\",\n                    \"descriptions\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\",\n                    \"body\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\\r\\nKuni kecha bo'lib o'tgan uchrashuvda to'rt kishidan iborat 8 ta guruh tashkil qilinib, ularga ikki hafta muddat ichida Toshkent shahridagi har qanday onlayn va oflayn tadbirlar to'g'risida e'lonli ma'lumot beruvchi uch bosqichli veb sahifa tayyorlash vazifasi topshirildi.\\r\\n\\r\\nDemak, roppa-rosa 2 haftadan keyin ishtirokchilarning qilgan ishlari chetdan kelgan mehmonlar tomonidan xolis baholanib, dastlabki uchta o'rin egalari qimmatbaho sovg'alar bilan taqdirlanadi. Biz barchaga omad tilab qolamiz.\",\n                    \"post_img\": \"https://s3-alpha-sig.figma.com/img/372b/e1ce/fa68fc76741d2c97416dd18326a974a5?Expires=1666569600&Signature=WokZvNm8uEKU4xw3j~mAB51jFdYD4MvOIKghmiUnoglQu11kwGAdTuAVeSGFK20DGkSYMWmCGMM6QLn~XeRoaez7iUHz2RiuiB-Qc~jzCZNYhWvFBhAagkdB7ui4mb0CmWwvEnQW1zyIg8GpctH~qjziuHc8PoF1F2Zx4VCJcpMGgMPQw3ixqnt8MPKv1Oxg~cq3NsuBKJaOx84Qz7hxNu-4bcAT8x3Mqs9vkG5TX-BUnn2Z~Ippa2QfJlyrRF9I38oXFLWlXquCGmd5pSnzdSH~62HLHbYqjknI5ou-oDA3A~gzfHMJ0Znj0RKsf7yV3nQNS8DhFOogX~2~fulzdA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA\"\n                }\n            ]\n        },\n        {\n            \"event_id\": 2,\n            \"to_char\": \"21/10/2022\",\n            \"event_time\": \"15:00:00\",\n            \"event_type\": \"offline\",\n            \"event_link\": \"https://www.youtube.com/liver24\",\n            \"category_id\": 2,\n            \"sub_category_id\": 3,\n            \"views\": 2,\n            \"organizer\": [\n                {\n                    \"organizer_id\": 2,\n                    \"legal_name\": null,\n                    \"organizer_fullname\": \"Sadoqat Kaziyeva\",\n                    \"profession\": \"UI/UX designer\",\n                    \"contact\": \"998910097609\",\n                    \"contact_extra\": \"998904567814\",\n                    \"organizer_type\": \"physical\"\n                }\n            ],\n            \"post\": [\n                {\n                    \"post_id\": 2,\n                    \"title\": \"Sadoqat Kaziyevadan UI/UX bo'yicha master klass\",\n                    \"descriptions\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\",\n                    \"body\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\\r\\nKuni kecha bo'lib o'tgan uchrashuvda to'rt kishidan iborat 8 ta guruh tashkil qilinib, ularga ikki hafta muddat ichida Toshkent shahridagi har qanday onlayn va oflayn tadbirlar to'g'risida e'lonli ma'lumot beruvchi uch bosqichli veb sahifa tayyorlash vazifasi topshirildi.\\r\\n\\r\\nDemak, roppa-rosa 2 haftadan keyin ishtirokchilarning qilgan ishlari chetdan kelgan mehmonlar tomonidan xolis baholanib, dastlabki uchta o'rin egalari qimmatbaho sovg'alar bilan taqdirlanadi. Biz barchaga omad tilab qolamiz.\",\n                    \"post_img\": \"https://s3-alpha-sig.figma.com/img/9e8e/a97a/028d8c780bfacf1cfb5fca1b874cded2?Expires=1666569600&Signature=HKJ84TQps9ANTypLa6bnWo3zUNLjthlbmdBR3HrBXybV3AcXw~j153ym~fMvSsiZlfVlDf2BVlzDIgt0Ho1Dw2OttbdUzjQZfUWHpLsXXjbzVVNam-gnox3hDwJv5tFP9KeCOAid3-IiC90YbiVREvpiXtqATaa0X4kDWY5uYkJjdkOqXIWsDqk8W6VJ-fSVhJII~Ssyc~RY7lYRIvwXrDs~brv-UI2g6QT8ZW8vD5aoLPjmfqdPmSEwcTF29U0-bNa8J8TOKpKl4QzwLtQpmbRE4-Z0M-d-JaHVUr5h7cVk~QTc1tQz5VF6ZwjmKHO~7N~tpMrcb-u0r-SpCDTx9Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA\"\n                }\n            ]\n        },\n        {\n            \"event_id\": 3,\n            \"to_char\": \"17/01/2022\",\n            \"event_time\": \"21:00:00\",\n            \"event_type\": \"online\",\n            \"event_link\": \"https://www.youtube.com/liver24\",\n            \"category_id\": 3,\n            \"sub_category_id\": 5,\n            \"views\": 4,\n            \"organizer\": [\n                {\n                    \"organizer_id\": 3,\n                    \"legal_name\": \"Biznes school\",\n                    \"organizer_fullname\": \"MuhammadAli Eshonqulov\",\n                    \"profession\": \"Biznesmen\",\n                    \"contact\": \"998971234567\",\n                    \"contact_extra\": \"999338915634\",\n                    \"organizer_type\": \"legal\"\n                }\n            ],\n            \"post\": [\n                {\n                    \"post_id\": 3,\n                    \"title\": \"Yuksalish loyihasi AQSHda ovozli suhbat\",\n                    \"descriptions\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\",\n                    \"body\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\\r\\nKuni kecha bo'lib o'tgan uchrashuvda to'rt kishidan iborat 8 ta guruh tashkil qilinib, ularga ikki hafta muddat ichida Toshkent shahridagi har qanday onlayn va oflayn tadbirlar to'g'risida e'lonli ma'lumot beruvchi uch bosqichli veb sahifa tayyorlash vazifasi topshirildi.\\r\\n\\r\\nDemak, roppa-rosa 2 haftadan keyin ishtirokchilarning qilgan ishlari chetdan kelgan mehmonlar tomonidan xolis baholanib, dastlabki uchta o'rin egalari qimmatbaho sovg'alar bilan taqdirlanadi. Biz barchaga omad tilab qolamiz.\",\n                    \"post_img\": \"https://s3-alpha-sig.figma.com/img/0453/16b7/a792c07263af12a93e6a515560be941f?Expires=1666569600&Signature=TRWRTW~OQeIihF3Qsiu7~kD-jj4ViNFDDd9wX956Nh5vSKG6-yrjLvlke4ctrNg7-zEjK1rVIEyuDyG5qcaFbBgi~~HucBCtSs6~CeXahMnEAPFGY-gB0kTw1tlJBopMlbIfXciqh3lmZ~J4P0S~CH6nhncpvYKV9ieDJMnzR~XcUeE2qhxcdn8c4Qt8DjjGT8QGHAIiUoxD9wbBi~Idsy7rZsxmROLYc6G3sWlJPko~bYbR3W9fgsNrPdF9pncYJwuq~vphRoa-~N0TWrwsXfB1KJgGDgV8qIslKZKzzb~suuY0K8pglURgvJPXu8Zz4M9P~CVLAdZhq8aBUrDJzg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA\"\n                }\n            ]\n        },\n        {\n            \"event_id\": 4,\n            \"to_char\": \"17/01/2022\",\n            \"event_time\": \"15:00:00\",\n            \"event_type\": \"offline\",\n            \"event_link\": \"https://www.youtube.com/liver24\",\n            \"category_id\": 2,\n            \"sub_category_id\": 4,\n            \"views\": 0,\n            \"organizer\": [\n                {\n                    \"organizer_id\": 4,\n                    \"legal_name\": \"Najot ta'lim\",\n                    \"organizer_fullname\": \"Jahongir G'lomov\",\n                    \"profession\": \"Grafik designer\",\n                    \"contact\": \"998910097609\",\n                    \"contact_extra\": \"998904567814\",\n                    \"organizer_type\": \"legal\"\n                }\n            ],\n            \"post\": [\n                {\n                    \"post_id\": 4,\n                    \"title\": \"Jahongir G'ulamovdan dizayn sohasi bo'yicha master klass\",\n                    \"descriptions\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\",\n                    \"body\": \"Najot Ta'lim jamoasi o'z o'quvchilari uchun manfaatli bo'lgan musobaqalarni tashkil etishda davom etadi. Biz bu gal markazimizdagi uch soha vakillari, ya'ni UX/UI dizayner, frontend va backend dasturchilarni \\\"bir dasturxon atrofida\\\" to'plashga qaror qildik.\\r\\n\\r\\nKuni kecha bo'lib o'tgan uchrashuvda to'rt kishidan iborat 8 ta guruh tashkil qilinib, ularga ikki hafta muddat ichida Toshkent shahridagi har qanday onlayn va oflayn tadbirlar to'g'risida e'lonli ma'lumot beruvchi uch bosqichli veb sahifa tayyorlash vazifasi topshirildi.\\r\\n\\r\\nDemak, roppa-rosa 2 haftadan keyin ishtirokchilarning qilgan ishlari chetdan kelgan mehmonlar tomonidan xolis baholanib, dastlabki uchta o'rin egalari qimmatbaho sovg'alar bilan taqdirlanadi. Biz barchaga omad tilab qolamiz.\",\n                    \"post_img\": \"https://s3-alpha-sig.figma.com/img/6b5a/892f/0a27407ff7160f9f64b75ff794680bf5?Expires=1666569600&Signature=Qyir2EcaZB5Ch97jIally8cwKUQv6dpaQJGMhT81FwyLRaSyIiINARhnm7ysnbo6Wjl-ENmZNizv3QbGO8rF-Ustxc63Jyz5G7s9aJch88zYGl0vKLLjQdI8mtKTGGu45rzN-iKDrLQDOv4rw6oGjv8L4BhVTgrO2fUQ8dFnvoa6Cy39of1UvJPBb~wZ7ggh2v14YS4F9Vkxj1F8Kn11VZvFr5urazHNuXSG-izDUjQ1xS2a5rpHBgykPj94cyznBlMZHg~Zs4SWdZ960awqnIUdg0yZ8q2YZ3wzkwkG8XKVMY8pF4hcOZubUS5Zi8wqNsi78G5-6f43OWJb6hmyYA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA\"\n                }\n            ]\n        },\n        {\n            \"event_id\": 5,\n            \"to_char\": \"08/11/2022\",\n            \"event_time\": \"17:00:00\",\n            \"event_type\": \"offline\",\n            \"event_link\": \"http://Youtube.com/liver24\",\n            \"category_id\": 5,\n            \"sub_category_id\": 9,\n            \"views\": 1,\n            \"organizer\": [\n                {\n                    \"organizer_id\": 5,\n                    \"legal_name\": null,\n                    \"organizer_fullname\": \"John Doe\",\n                    \"profession\": \"Marketolog\",\n                    \"contact\": \"998906785645\",\n                    \"contact_extra\": \"998906787856\",\n                    \"organizer_type\": \"physical\"\n                }\n            ],\n            \"post\": [\n                {\n                    \"post_id\": 5,\n                    \"title\": \"Instagramda marketing sirlari\",\n                    \"descriptions\": \"Instagramda marketing sirlari.......................................\",\n                    \"body\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\\n\\n\",\n                    \"post_img\": \"image-1666042576605-600019596.jpg\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Evants by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwNDIyMjl9.x0flzl_8ltiCsEPYdchUiTyULeJeyiH2IaCcyDVkyPA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/admin/events/pending",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"events",
+								"pending"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Evants by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwNDIyMjl9.x0flzl_8ltiCsEPYdchUiTyULeJeyiH2IaCcyDVkyPA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/admin/events/pending",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"admin",
+										"events",
+										"pending"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "778"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"30a-uB/xOjtHYEXttEaZgaPyvakm5Os\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 21:37:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"events by status\",\n    \"data\": [\n        {\n            \"event_id\": 5,\n            \"to_char\": \"08/11/2022\",\n            \"event_time\": \"17:00:00\",\n            \"event_type\": \"offline\",\n            \"event_link\": \"http://Youtube.com/liver24\",\n            \"category_id\": 5,\n            \"sub_category_id\": 9,\n            \"views\": 0,\n            \"organizer\": [\n                {\n                    \"organizer_id\": 5,\n                    \"legal_name\": null,\n                    \"organizer_fullname\": \"John Doe\",\n                    \"profession\": \"Marketolog\",\n                    \"contact\": \"998906785645\",\n                    \"contact_extra\": \"998906787856\",\n                    \"organizer_type\": \"physical\"\n                }\n            ],\n            \"post\": [\n                {\n                    \"post_id\": 5,\n                    \"title\": \"Instagramda marketing sirlari\",\n                    \"descriptions\": \"Instagramda marketing sirlari.......................................\",\n                    \"body\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\\n\\n\",\n                    \"post_img\": \"image-1666042576605-600019596.jpg\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "POST events",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2022-11-25",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "13:00",
+									"type": "text"
+								},
+								{
+									"key": "categoryId",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "subcategoryId",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "eventType",
+									"value": "offline",
+									"type": "text"
+								},
+								{
+									"key": "eventLink",
+									"value": "http://Youtube.com/liver24",
+									"type": "text"
+								},
+								{
+									"key": "organizerType",
+									"value": "physical",
+									"type": "text"
+								},
+								{
+									"key": "fullname",
+									"value": "John Smith",
+									"type": "text"
+								},
+								{
+									"key": "proffesion",
+									"value": "Marketolog",
+									"type": "text"
+								},
+								{
+									"key": "contact",
+									"value": "998906785645",
+									"type": "text"
+								},
+								{
+									"key": "extraContact",
+									"value": "998906787856",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Telegramd marketing sirlari",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Telegramda marketing sirlari.......................................",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\n\n",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ThinkPad/Pictures/chasyi-na-upakovke.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://pressa-exam.herokuapp.com/events",
+							"protocol": "https",
+							"host": [
+								"pressa-exam",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST events",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "date",
+											"value": "2022-11-25",
+											"type": "text"
+										},
+										{
+											"key": "time",
+											"value": "13:00",
+											"type": "text"
+										},
+										{
+											"key": "categoryId",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "subcategoryId",
+											"value": "9",
+											"type": "text"
+										},
+										{
+											"key": "eventType",
+											"value": "offline",
+											"type": "text"
+										},
+										{
+											"key": "eventLink",
+											"value": "http://Youtube.com/liver24",
+											"type": "text"
+										},
+										{
+											"key": "organizerType",
+											"value": "physical",
+											"type": "text"
+										},
+										{
+											"key": "fullname",
+											"value": "John Smith",
+											"type": "text"
+										},
+										{
+											"key": "proffesion",
+											"value": "Marketolog",
+											"type": "text"
+										},
+										{
+											"key": "contact",
+											"value": "998906785645",
+											"type": "text"
+										},
+										{
+											"key": "extraContact",
+											"value": "998906787856",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Telegramd marketing sirlari",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Telegramda marketing sirlari.......................................",
+											"type": "text"
+										},
+										{
+											"key": "body",
+											"value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\n\n",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/ThinkPad/Pictures/chasyi-na-upakovke.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/events",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"events"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"2c-HoR6uZLy2LTQjev4OM1cTz7gSw8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 21:55:23 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"message\": \"new event created\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Change event status to active",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwNDIyMjl9.x0flzl_8ltiCsEPYdchUiTyULeJeyiH2IaCcyDVkyPA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://pressa-exam.herokuapp.com/admin/events/5",
+							"protocol": "https",
+							"host": [
+								"pressa-exam",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"events",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Change event status to active",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwNDIyMjl9.x0flzl_8ltiCsEPYdchUiTyULeJeyiH2IaCcyDVkyPA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/admin/events/5",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"admin",
+										"events",
+										"5"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "320"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"140-eLFLxd3kPwIKeUlKnzSRvwN3tLE\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 21:52:43 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"message\": \"event status updated\",\n    \"data\": {\n        \"event_id\": 5,\n        \"event_day\": \"2022-11-08T00:00:00.000Z\",\n        \"event_time\": \"17:00:00\",\n        \"category_id\": 5,\n        \"sub_category_id\": 9,\n        \"event_type\": \"offline\",\n        \"event_link\": \"http://Youtube.com/liver24\",\n        \"organizer_id\": 5,\n        \"post_id\": 5,\n        \"status\": \"active\",\n        \"created_at\": \"2022-10-17T21:36:16.833Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Change event status to rejected",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwNDIyMjl9.x0flzl_8ltiCsEPYdchUiTyULeJeyiH2IaCcyDVkyPA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://pressa-exam.herokuapp.com/admin/events/6",
+							"protocol": "https",
+							"host": [
+								"pressa-exam",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"events",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Change event status to rejected",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwNDIyMjl9.x0flzl_8ltiCsEPYdchUiTyULeJeyiH2IaCcyDVkyPA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/admin/events/6",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"admin",
+										"events",
+										"6"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "316"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"13c-sfm14cG/ukDxsg7wwv0lX7cUziQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 21:55:30 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"message\": \"event rejected\",\n    \"data\": {\n        \"event_id\": 6,\n        \"event_day\": \"2022-11-08T00:00:00.000Z\",\n        \"event_time\": \"17:00:00\",\n        \"category_id\": 5,\n        \"sub_category_id\": 9,\n        \"event_type\": \"offline\",\n        \"event_link\": \"http://Youtube.com/liver24\",\n        \"organizer_id\": 6,\n        \"post_id\": 6,\n        \"status\": \"rejected\",\n        \"created_at\": \"2022-10-17T21:50:47.817Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get events by pending status only admins",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwNDIyMjl9.x0flzl_8ltiCsEPYdchUiTyULeJeyiH2IaCcyDVkyPA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://pressa-exam.herokuapp.com/admin/events/pending",
+							"protocol": "https",
+							"host": [
+								"pressa-exam",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"events",
+								"pending"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get events by pending status only admins",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwNDIyMjl9.x0flzl_8ltiCsEPYdchUiTyULeJeyiH2IaCcyDVkyPA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/admin/events/pending",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"admin",
+										"events",
+										"pending"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "777"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"309-a6l/dl4IN4Dr8FRDH6sAdE4A7uU\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 21:58:43 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"events by status\",\n    \"data\": [\n        {\n            \"event_id\": 7,\n            \"to_char\": \"25/11/2022\",\n            \"event_time\": \"13:00:00\",\n            \"event_type\": \"offline\",\n            \"event_link\": \"http://Youtube.com/liver24\",\n            \"category_id\": 5,\n            \"sub_category_id\": 9,\n            \"views\": 0,\n            \"organizer\": [\n                {\n                    \"organizer_id\": 7,\n                    \"legal_name\": null,\n                    \"organizer_fullname\": \"John Smith\",\n                    \"profession\": \"Marketolog\",\n                    \"contact\": \"998906785645\",\n                    \"contact_extra\": \"998906787856\",\n                    \"organizer_type\": \"physical\"\n                }\n            ],\n            \"post\": [\n                {\n                    \"post_id\": 7,\n                    \"title\": \"Telegramd marketing sirlari\",\n                    \"descriptions\": \"Telegramda marketing sirlari.......................................\",\n                    \"body\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\\n\\n\",\n                    \"post_img\": \"image-1666043722994-735553454.jpg\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get events by rejected status only admins",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwNDIyMjl9.x0flzl_8ltiCsEPYdchUiTyULeJeyiH2IaCcyDVkyPA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://pressa-exam.herokuapp.com/admin/events/rejected",
+							"protocol": "https",
+							"host": [
+								"pressa-exam",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"events",
+								"rejected"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get events by rejected status only admins",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJpYXQiOjE2NjYwNDIyMjl9.x0flzl_8ltiCsEPYdchUiTyULeJeyiH2IaCcyDVkyPA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/admin/events/rejected",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"admin",
+										"events",
+										"rejected"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "778"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"30a-wlqDJNurSWS/vYatBiWMt7hWAzg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 22:00:14 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"events by status\",\n    \"data\": [\n        {\n            \"event_id\": 6,\n            \"to_char\": \"08/11/2022\",\n            \"event_time\": \"17:00:00\",\n            \"event_type\": \"offline\",\n            \"event_link\": \"http://Youtube.com/liver24\",\n            \"category_id\": 5,\n            \"sub_category_id\": 9,\n            \"views\": 0,\n            \"organizer\": [\n                {\n                    \"organizer_id\": 6,\n                    \"legal_name\": null,\n                    \"organizer_fullname\": \"John Doe\",\n                    \"profession\": \"Marketolog\",\n                    \"contact\": \"998906785645\",\n                    \"contact_extra\": \"998906787856\",\n                    \"organizer_type\": \"physical\"\n                }\n            ],\n            \"post\": [\n                {\n                    \"post_id\": 6,\n                    \"title\": \"Instagramda marketing sirlari\",\n                    \"descriptions\": \"Instagramda marketing sirlari.......................................\",\n                    \"body\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,\\nmolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum\\n\\n\",\n                    \"post_img\": \"image-1666043447099-870432571.jpg\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Post views to events",
+			"item": [
+				{
+					"name": "POST view",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://pressa-exam.herokuapp.com/views/1",
+							"protocol": "https",
+							"host": [
+								"pressa-exam",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"views",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST view",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "https://pressa-exam.herokuapp.com/views/1",
+									"protocol": "https",
+									"host": [
+										"pressa-exam",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"views",
+										"1"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "145"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"91-DWY7tMaP5FCcu8ZPlvpgOeGLVMI\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Oct 2022 22:02:02 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"message\": \"new view created\",\n    \"data\": {\n        \"view_id\": 13,\n        \"view_ip\": \"::ffff:10.1.44.52\",\n        \"view_agent\": \"PostmanRuntime/7.29.2\",\n        \"event_id\": 1\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
