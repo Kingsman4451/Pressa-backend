@@ -7,6 +7,7 @@ import modules from './modules/index.js'
 
 const app = express();
 app.use(cors())
+app.use(express.static(path.join(process.cwd(), 'uploads')));
 app.use(express.json())
 app.use(modules)
 
