@@ -3,6 +3,7 @@ import cors from 'cors';
 import { PORT } from './config.js';
 import handleError from './middlewares/handleError.js';
 import modules from './modules/index.js'
+import path from 'path';
 
 
 const app = express();
